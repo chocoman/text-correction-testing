@@ -14,9 +14,14 @@ pip3 install -r requirements.txt
 ```
 
 Potom můžete použít vyhodnocovací skritp následovně:
-
+na Linuxu:
 ```
 python3 evaluate_correction.py data/voda.txt cesta/k/vasemu/opravenemu/souboru.txt
+```
+
+na Windows:
+```
+python evaluate_correction.py data/voda.txt cesta/k/vasemu/opravenemu/souboru.txt
 ```
 
 Skript by vám měl vypsat číslo, které říká, kolik chyb ve vašem opraveném textu zůstalo.

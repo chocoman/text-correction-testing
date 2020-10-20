@@ -56,7 +56,7 @@ def correct_word(word):
   return prefix + find_best_match(cleaned_word) + suffix
 
 def load_vocabulary(path):
-  with open(path, 'r') as input_file:
+  with open(path, 'r', encoding='utf8') as input_file:
     for line in input_file:
       fields = line.split('\t')
       # word = fields[1]
@@ -65,13 +65,13 @@ def load_vocabulary(path):
 
 def load_input(path):
   lines = []
-  with open(path, 'r') as input_file:
+  with open(path, 'r', encoding='utf8') as input_file:
     for line in input_file:
         lines.append(line[:-1]) # řádek bez znaku nového řádku \n na konci
   return lines
 
 def write_line(line, path):
-  with open(path, 'a') as output_file: # a jako "append" - přidáme do souboru něco na konec
+  with open(path, 'a', encoding='utf8') as output_file: # a jako "append" - přidáme do souboru něco na konec
     output_file.write(line + '\n')
 
 load_vocabulary(vocabulary_path)
